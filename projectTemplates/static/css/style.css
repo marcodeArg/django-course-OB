@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav, footer {
+  background-color: #101010;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: inherit;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+  color: beige;
+}
+
+.logo {
+  width: 100px;
+}
+
+.footer-text {
+  display: inherit;
+}

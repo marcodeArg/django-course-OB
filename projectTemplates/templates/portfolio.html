@@ -1,0 +1,44 @@
+{% extends './layouts/base.html' %} {% load static %}
+
+{% block title %}Home{% endblock %} 
+
+{% block content %}
+<div class="images-container">
+  <img 
+    class="images-image" 
+    src="{% static 'images/chef.jpg' %}" 
+    alt="chef" 
+    width="300px"
+  />
+  <img
+    class="images-image"
+    src="{% static './images/hombre.jpg' %}"
+    alt="hombre"
+    width="300px"
+  />
+  <img
+    class="images-image"
+    src="{% static './images/vista.jpg' %}"
+    alt="vista"
+    width="300px"
+  />
+  <img 
+    class="images-image" 
+    src="{% static './images/chef.jpg' %}" 
+    alt="chef" 
+    width="300px"
+  />
+  <img
+    class="images-image"
+    src="{% static './images/hombre.jpg' %}"
+    alt="hombre"
+    width="300px"
+  />
+  <img
+    class="images-image"
+    src="{% static './images/vista.jpg' %}"
+    alt="vista"
+    width="300px"
+  />
+</div>
+{% endblock %}
