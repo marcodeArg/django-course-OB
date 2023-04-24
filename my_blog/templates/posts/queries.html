@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Queries from authors</h1>
+
+  {% if authors %} 
+    {% for author in authors %}
+      <p>{{author.name}} ({{author.email}})</p><br>
+    {% endfor %} 
+  {% endif %}
+
+  <h2>Total de autores: {{ authors|length }}</h2>
+
+  <hr>
+  <hr>
+  
+  <h2>Specific query:</h2>
+  
+  {% for filter_data in filtered %}
+    <p>{{ filter_data.name }} ({{ filter_data.email }})</p>
+  {% endfor %}
+    
+  <h2>First query:</h2>
+  <p>{{ author.name }} ({{ author.email }})</p>
+
+  <hr>
+  <hr>
+
+  <h2>Registros del 10 al 20:</h2>
+  <ol>
+    {% for data in limit %}
+      <li>{{data}}</li>
+    {% endfor %}
+  </ol>
+
+
+  <hr>
+  <hr>
+
+  <h2>Registros ordenados por email</h2>
+  <ol>
+    {% for data in order_data %}
+      <li>{{data.email}}</li>
+    {% endfor %}
+  </ol>
+
+  <hr>
+  <hr>
+
+  <h2>ID menor o igual que 15</h2>
+  <ol>
+    {% for filter_data in filtered2 %}
+      <li>{{filter_data.email}}</li>
+    {% endfor %}
+  </ol>
+</body> 
+
+</html>
