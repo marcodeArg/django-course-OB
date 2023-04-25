@@ -16,6 +16,13 @@ def create(request):
     art5 = Article.objects.create(headline = 'Technology', pub_date=date(2024,3,12), reporter = rep2)
     art6 = Article.objects.create(headline = 'Space x', pub_date=date(2024,4,10), reporter = rep2)
 
+    # Get from article to reporter
+    # result = art1.reporter.first_name + ' | ' + art1.headline
 
+    # Get from reporter to article
+    # result = rep2.article_set.all()
 
-    return HttpResponse('Data created')
+    # And any type of filtering, like a normal query
+    result = rep2.article_set.filter(headline__iexact='technology')
+
+    return HttpResponse(result)
