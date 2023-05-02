@@ -2,7 +2,7 @@
 {% block title %}Form{% endblock %}
 
 {% block content %}
-  <form action="{% url 'add' %}" method="POST">
+  <form action="{% url 'add' %}" method="POST" class="container">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value='Add Record'>
